@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project Farm</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="background-color:skyblue ">
+<!-- Grey with black text -->
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/farm1">Farm One</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/farm2">Farm Two</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/farm3">Farm Three</a>
+    </li>
+  </ul>
+</nav>
+<div style='padding-right: 10px;padding-left:10px 'class="">
+	<h4 style="color:white" class="font-weight-bold font-lighter " href="/farm3">CLICK ON THE PHOTOS TO GO TO RESPECTIVE FARM</h4>
+	<div class=" row">
+		<div class="col-md-4">
+			<a href="/farm1">
+				<img height="100%" width="100%"src="https://www.massaudubon.org/var/ezdemo_site/storage/images/site_ma/get-outdoors/wildlife-sanctuaries/drumlin-farm/11401-225-eng-US/drumlin-farm-wildlife-sanctuary.jpg">
+			</a>
+			<a class="font-weight-bold" href="/farm1">
+				<h6  style="color:#FFF;text-align: center">FARM ONE</h6>
+			</a>
+		</div>
+		<div class='col-md-4'>
+			<a href="/farm2">
+				<img height="100%" width='100%'src="https://timedotcom.files.wordpress.com/2018/04/farm-museum-viral-memes.jpg">
+			</a>
+			
+			<a  class="font-weight-bold" href="/farm2">
+				<h6  style="color:#FFF;text-align: center">FARM TWO</h6>
+			</a>
+		</div>
+		<div class='col-md-4'>
+			<a href="farm3">
+				<img height="100%" width="100%" src="https://s3.amazonaws.com/sfc-dynamic-content/gallery/71/original/IMG_0478.JPG">	
+			</a>
+			
+			<a  class="font-weight-bold" href="/farm3">
+				<h6  style="color:#ffffff;text-align: center">FARM THREE</h6>
+			</a>
+		</div>
+	</div>
+	
+</div>
+<br><br><br>
+<h5 style="color:#fff"class="container">TRANSFER FROM ONE FARM TO ANOTHER</h5>
+<form class="form jumbotron container" action="transfer" method="POST">
+  
+<label for="fromTable" class="mr-sm-2">Transfer from:</label>  
+  <select name="fromTable" class="custom-select">
+    <option selected>Select One</option>
+    <option value="farm1">Farm One</option>
+    <option value="farm2">Farm Two</option>
+    <option value="farm3">Farm Three</option>
+  </select>
+
+<label for="toTable" class="mr-sm-2">Transfer To:</label>  
+  <select name="toTable" class="custom-select">
+    <option selected>Select One</option>
+    <option value="farm1">Farm One</option>
+    <option value="farm2">Farm Two</option>
+    <option value="farm3">Farm Three</option>
+
+  </select>  
+  
+  
+  <label for="name" class="mr-sm-2">Name of Vegetable or Other Product</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" name='name'>
+  <label for="number" class="mr-sm-2">Number of items</label>
+  <input type="number" class="form-control mb-2 mr-sm-2" name='number'>
+  
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+</body>
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>

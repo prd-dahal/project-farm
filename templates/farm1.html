@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body style="background-image: url('https://www.massaudubon.org/var/ezdemo_site/storage/images/site_ma/get-outdoors/wildlife-sanctuaries/drumlin-farm/11401-225-eng-US/drumlin-farm-wildlife-sanctuary.jpg')">
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/farm1">Farm One</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/farm2">Farm Two</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/farm3">Farm Three</a>
+    </li>
+  </ul>
+</nav>
+<div style="padding-top: 10px"class="container"><h5 style="color:white">ITEM DETAILS OF FARM ONE</h5></div>
+<table class="table container thead-dark">
+	<thead  class="thead-dark">
+		<tr>
+			<th scope="col">Name of Item</th>
+			<th scope="col">No of Item</th>
+		</tr>
+	</thead>
+	<tbody>
+		{% for item in items %}
+		<tr style="color:white">
+			<td>{{item[0]}}</td>
+			<td>{{item[1]}}</td>
+		</tr>]
+	</tbody>
+	{% endfor %}
+</table>
+<div class="container"><h5 style="color:white">	ADD AN ITEM TO FARM ONE</h5></div>
+
+<form class="form jumbotron container" action="update1", METHOD='POST'>
+  <div class="form-group">
+    <label for="name">Name of Item:<t></label>
+    <input type="text" class="form-control" id="name", name='name'>
+  </div>
+  <div class="form-group">
+    <label for="pwd">No of Item</label>
+    <input type="number" class="form-control" id="num" name='num'>
+  </div>
+  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+<br>
+<h5 style='color:white' class="container">DELETE DATA FROM FARM ONE</h5>
+<form class="form jumbotron container", action='delete1', METHOD='POST'>
+		<div class="form-group">
+    		<label for="name">Name of Item:<t></label>
+    		<input type="text" class="form-control" id="name", name='delName'>
+  		</div>
+  		<button type="submit" class="btn btn-primary mb-2">Submit</button>
+</form>
+</body>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</html>
